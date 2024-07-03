@@ -5,34 +5,38 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link href="output.css" rel="stylesheet" />
-    <title>LinkedIn Sample</title>
+    <link href="img/phone.png" rel="icon" />
+    <title>Marcus' Portfolio</title>
 </head>
 
 <body>
     <!-- Navigation -->
-    <nav class="absolute top-0 left-0 w-full py-10 px-6 z-[999]">
+    <nav class="fixed bg-black top-0 left-0 w-full py-5 px-6 z-[999]">
         <div class="flex justify-between items-center text-white max-w-screen-xl mx-auto text-lg">
-            <div class="lg:hidden text-2xl font-semibold uppercase">Jeffer Mogan</div>
+            <div class="lg:hidden text-2xl font-semibold uppercase">Marcus</div>
             <div class="lg:flex items-center gap-8 hidden">
-                <a href="#">Home</a>
-                <a href="#">About</a>
-                <a href="#">Gallery</a>
-                <a href="#">Services</a>
-                <a href="#">Contact</a>
+                <a href="#hero" class="font-semibold text-2xl">Marcus</a>
+                <a class="opacity-50 hover:opacity-100" href="#hero">Home</a>
+                <a class="opacity-50 hover:opacity-100" href="#about">About</a>
+                <a class="opacity-50 hover:opacity-100" href="#services">Services</a>
+                <a class="opacity-50 hover:opacity-100" href="#gallery">Gallery</a>
+                <a class="opacity-50 hover:opacity-100" href="#contact">Contact</a>
             </div>
-            <div class="lg:flex gap-2 items-center hidden">
+            <a href="tel:+959255599863" class="lg:flex gap-2 items-center hidden">
                 Contact +123 456 789 
                 <img src="img/phone.png" alt="" class="w-7 h-7 invert">
-            </div>
+            </a>
             <button id="menuBtn" class="lg:hidden text-2xl font-semibold rotate-90 z-[999]">|||</button>
-            <div id="menu" class="translate-x-full duration-500 ease-out lg:hidden fixed top-0 left-0 w-full h-screen bg-black text-white flex items-center justify-center">
+            <div id="menu" class="hidden opacity-0 duration-500 ease-out lg:hidden fixed top-0 left-0 w-full h-screen bg-black/80 backdrop-blur-md text-white flex items-center justify-center">
                 <div class="flex flex-col gap-8 text-center font-semibold text-lg">
-                    <a href="#">Home</a>
-                    <a href="#">About</a>
-                    <a href="#">Gallery</a>
-                    <a href="#">Services</a>
-                    <a href="#">Contact</a>
+                    <a class="opacity-50 hover:opacity-100" href="#hero">Home</a>
+                    <a class="opacity-50 hover:opacity-100" href="#about">About</a>
+                    <a class="opacity-50 hover:opacity-100" href="#services">Services</a>
+                    <a class="opacity-50 hover:opacity-100" href="#gallery">Gallery</a>
+                    <a class="opacity-50 hover:opacity-100" href="#contact">Contact</a>
                 </div>
+
+                <button id="menuClose" class="w-full h-full absolute top-0 left-0 -z-10"></button>
             </div>
         </div>
     </nav>
@@ -53,7 +57,7 @@
     </div>
 
     <!-- who am i -->
-    <div class="lg:h-screen flex items-center justify-center p-10 lg:p-20">
+    <div id="about" class="lg:h-screen flex items-center justify-center p-10 lg:p-20">
         <div class="max-w-screen-xl mx-auto flex h-full w-full gap-20 flex-col-reverse lg:flex-row">
             <div class="flex-grow flex items-center">
                 <div class="flex flex-col">
@@ -81,7 +85,7 @@
     </div>
 
     <!-- how I work -->
-    <div class="lg:h-screen flex items-center justify-center p-10 lg:p-20 relative">
+    <div id="services" class="lg:h-screen flex items-center justify-center p-10 lg:p-20 relative">
         <img src="img/hands.png" alt="" class="absolute w-full h-full object-cover brightness-50 top-0 left-0 -z-10">
         <div class="max-w-screen-xl mx-auto w-full text-white">
             <div class="text-4xl lg:text-6xl font-semibold pb-2 uppercase text-center py-5">How I work</div>
@@ -121,7 +125,6 @@
             </div>
         </div>
     </div>
-
     
     <!-- behind the scene -->
     <div class="lg:h-screen flex items-center justify-center p-10 lg:p-20">
@@ -138,7 +141,7 @@
     </div>
 
     <!-- my work -->
-    <div class="lg:min-h-screen overflow-hidden flex items-center justify-center p-10 lg:p-20">
+    <div id="gallery" class="lg:min-h-screen overflow-hidden flex items-center justify-center p-10 lg:p-20">
         <div class="max-w-screen-xl mx-auto w-full">
             <div class="text-4xl lg:text-6xl font-semibold pb-2 uppercase text-center py-5">My works</div>
             <div class="grid grid-cols-4 gap-5 py-20 lg:py-10 scale-150 lg:scale-100">
@@ -159,7 +162,7 @@
     </div>
 
     <!-- behind the scene -->
-    <div class="lg:h-screen flex items-center justify-center p-10 lg:p-20">
+    <div id="contact" class="lg:h-screen flex items-center justify-center p-10 lg:p-20">
         <div class="max-w-screen-xl mx-auto flex h-full w-full gap-20 flex-col-reverse lg:flex-row">
             <div class="flex-grow flex items-center">
                 <div class="flex flex-col w-full">
@@ -179,14 +182,14 @@
 
     <!-- footer -->
     <div class="p-10 bg-black text-white">
-        <div class="text-center text-2xl lg:text-4xl font-semibold uppercase">Jeffer Mogan</div>
+        <div class="text-center text-2xl lg:text-4xl font-semibold uppercase">Marcus</div>
         <div class="h-[1px] bg-white my-5"></div>
         <div class="flex justify-around">
-            <a href="" class="">Home</a>
-            <a href="" class="">Home</a>
-            <a href="" class="">Home</a>
-            <a href="" class="">Home</a>
-            <a href="" class="">Home</a>
+            <a href="#hero" class="">Home</a>
+            <a href="#about" class="">About</a>
+            <a href="#services" class="">Services</a>
+            <a href="#gallery" class="">Gallery</a>
+            <a href="#contact" class="">Contact</a>
         </div>
         <div class="flex gap-5 w-fit mx-auto py-5">
             <a href="#">
@@ -207,9 +210,15 @@
 
     <script>
         const menuBtn = document.getElementById('menuBtn');
+        const menuClose = document.getElementById('menuClose');
         const menu = document.getElementById('menu');
         menuBtn.addEventListener('click', () => {
-            menu.classList.toggle('translate-x-full');
+            menu.classList.toggle('hidden');
+            setTimeout(() => menu.classList.toggle('opacity-0'), 10)
+        })
+        menuClose.addEventListener('click', () => {
+            menu.classList.add('opacity-0');
+            setTimeout(() => menu.classList.add('hidden'), 500)
         })
     </script>
 </body>
